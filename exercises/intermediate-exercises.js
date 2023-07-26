@@ -1,6 +1,7 @@
 //@ts-check
 module.exports={
-    palindromo:palindromo
+    palindromo:palindromo,
+    duplicateElement: duplicateElement
 }
 
 
@@ -23,3 +24,23 @@ function palindromo(string1) {
     }
 
 }
+
+/**
+ * Funcion que retorna un booleano true or false si el array tiene numeros duplicados
+ * @param {Array<number>} array1 Se debe ingresar un array de numeros.
+ * @returns {boolean} Retorna true or false si el array contiene numeros duplicados.
+ * 
+ */
+function duplicateElement(array1) {
+   
+    for(let i=0;i<array1.length-1;i++) {
+        for(let j=i+1; j<array1.length;j++){
+            if(array1[i]===array1[j]){ //[1,2,3]
+                return true;
+            }
+        }
+
+    }
+    return false;
+}
+
