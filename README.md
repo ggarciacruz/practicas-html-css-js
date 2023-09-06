@@ -29,3 +29,8 @@ let nombre = prompt('Escriba el nombre del estudiante: ');
 let edad = prompt('Escriba la edad del estudiante: ');
 let curso = prompt('Escriba el grado del estudiante: ');
 ###
+
+###
+# Con esta formula en excel se logra comparar entre codigos de dos columnas si existen (sirve para adicionar productos nuevos al catálogo)
+=SI(CONTAR.SI($A2:$A337;F2)>0;"EXISTE";"NO EXISTE")
+###

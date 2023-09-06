@@ -27,29 +27,49 @@ class Celular{
 /**
  * Clase estudiante
  */
-class Estudiante{
+class Persona{
     /**
      * 
      * @param {string} nombre Se debe ingresar el nombre del estudiante
      * @param {string} edad Se debe ingresar la edad del estudiante
-     * @param {string} grado Se debe ingresar el grado del estudiante
+     * @param {string} sexo Se debe ingresar el grado del estudiante
      */
-    constructor(nombre, edad, grado){
+    constructor(nombre, edad, sexo){
         this.nombre=nombre;
         this.edad=edad;
-        this.grado=grado;
+        this.sexo=sexo;
     }
 
     /**
      * retorna que el estudiante esta estudiando
      */
-    estudiar(){
-        return ('el estudiante '+this.nombre+', esta estudiando.');
+    saludar(){
+        return ('saludos a todos');
     }
 }
 
 
+
+class Estudiante extends Persona{
+    /**
+     * @param {string} nombre 
+     * @param {string} edad
+     * @param {string} sexo
+     * @param {string} curso
+     */
+    constructor(nombre,edad,sexo,curso){
+        super(nombre,edad,sexo);
+        this.curso=curso;
+    }
+}
+
+const student1=new Estudiante('Gary Gabriel',' 37 años','masculino','1ro secundaria')
+console.log(student1);
+
+
+
+
 module.exports={
-    Estudiante: Estudiante,
+    Persona: Persona,
     Celular:Celular
 }
